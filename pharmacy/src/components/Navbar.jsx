@@ -45,6 +45,13 @@ const Navbar = () => {
             >browse meds
             </Link>
           </li>
+          <li>
+            <Link
+              to="/signupadmin"
+              className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
+            >signupadmin
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

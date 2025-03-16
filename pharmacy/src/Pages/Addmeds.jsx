@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
 const Addmeds = () => {
-  const [meds_name, setMedsName] = useState("");
-  const [company, setCompany] = useState("");
-  const [age, setAge] = useState("");
-  const [type, setType] = useState("");
-  const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
+  const [meds_name , setMedsName] = useState("");
+  const [company , setCompany] = useState("");
+  const [age , setAge] = useState("");
+  const [type , setType] = useState("");
+  const [price , setPrice] = useState("");
+  const [image , setImage] = useState("");
+  const [description , setDescription]=useState("");
+  const [quantity,setQuantity]=useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = { meds_name, company, age, type, price, image };
+    const formData = { meds_name, company, age, type, price,quantity, description, image };
 
     console.log("Submitting data:", formData); 
 
@@ -35,6 +37,8 @@ const Addmeds = () => {
         setType("");
         setPrice("");
         setImage("");
+        setDescription("");
+        setQuantity("");
       } else {
         console.error("❌ Failed to add medication:", data.error);
         alert(`Error: ${data.error}`);
@@ -87,6 +91,22 @@ const Addmeds = () => {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             placeholder="Price"
+            required
+            className="input-field"
+          />
+          <input
+            type="number"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+            placeholder="quantity"
+            required
+            className="input-field"
+          />
+          <input
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="write a description"
             required
             className="input-field"
           />

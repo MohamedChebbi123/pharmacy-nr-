@@ -51,7 +51,7 @@ const Aboutus = () => {
             <p className="text-gray-600">Lead Pharmacist</p>
           </div>
 
-          {/* Team Member 2 */}
+          
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <img
               src="https://via.placeholder.com/150" // Replace with team member image
