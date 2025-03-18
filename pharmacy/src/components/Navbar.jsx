@@ -52,6 +52,13 @@ const Navbar = () => {
             >signupadmin
             </Link>
           </li>
+          <li>
+            <Link
+              to="/loginasadmin"
+              className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
+            >login as admin
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
