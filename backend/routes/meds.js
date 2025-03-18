@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db");
 
-router.post("/addmeds", (req, res) => {
+router.post("/addmeds", async(req, res) => {
   const { meds_name, company, age, type, price, quantity, description, image } = req.body;
 
   console.log("Received data:", req.body);
@@ -13,14 +13,14 @@ router.post("/addmeds", (req, res) => {
   }
 
   const query = "INSERT INTO meds (meds_name, company, age, type, price, quantity, description, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-
-  db.query(query, [meds_name, company, age, type, price, quantity, description, image], (err, res) => {
-    if (err) {
-      console.error("Database error:", err);
+try {
+  const store=await db.query(query, [meds_name, company, age, type, price, quantity, description, image])
+    return res.status(201).json({ message: "Medication added successfully" });
+  
+} catch (error) {
+  console.error("Database error:", error);
       return res.status(500).json({ error: "Database error occurred." });
-    }
-    res.status(201).json({ message: "Medication added successfully" });
-  });
+}
 });
 
 module.exports = router;

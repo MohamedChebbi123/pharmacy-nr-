@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AdminLogin = () => {
+const Loginclient = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -12,7 +12,7 @@ const AdminLogin = () => {
     setSuccess("");
 
     try {
-      const response = await fetch("http://localhost:7000/loginadmin/loginad", {
+      const response = await fetch("http://localhost:7000/loginclient/loginclient", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone_number: phoneNumber, password: password }),
@@ -70,4 +70,4 @@ const AdminLogin = () => {
   );
 };
 
-export default AdminLogin;
+export default Loginclient;

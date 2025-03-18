@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 
 const Addmeds = () => {
-  const [meds_name , setMedsName] = useState("");
-  const [company , setCompany] = useState("");
-  const [age , setAge] = useState("");
-  const [type , setType] = useState("");
-  const [price , setPrice] = useState("");
-  const [image , setImage] = useState("");
-  const [description , setDescription]=useState("");
-  const [quantity,setQuantity]=useState("");
+  const [meds_name, setMedsName] = useState("");
+  const [company, setCompany] = useState("");
+  const [age, setAge] = useState("");
+  const [type, setType] = useState("");
+  const [price, setPrice] = useState("");
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = { meds_name, company, age, type, price,quantity, description, image };
+    const formData = { meds_name, company, age, type, price, quantity, description, image };
 
-    console.log("Submitting data:", formData); 
+    console.log("Submitting data:", formData);
 
     try {
       const response = await fetch("http://localhost:7000/meds/addmeds", {
@@ -30,7 +31,7 @@ const Addmeds = () => {
       console.log("Server response:", data);
 
       if (response.ok) {
-        alert("✅ Medication added successfully!");
+        setSuccessMessage("✅ Medication added successfully!");
         setMedsName("");
         setCompany("");
         setAge("");
@@ -39,6 +40,8 @@ const Addmeds = () => {
         setImage("");
         setDescription("");
         setQuantity("");
+
+        setTimeout(() => setSuccessMessage(""), 3000);
       } else {
         console.error("❌ Failed to add medication:", data.error);
         alert(`Error: ${data.error}`);
@@ -53,6 +56,13 @@ const Addmeds = () => {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Add Medication</h2>
+        
+        {successMessage && (
+          <div className="bg-green-200 text-green-800 p-2 rounded-md mb-4 text-center">
+            {successMessage}
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
@@ -98,7 +108,7 @@ const Addmeds = () => {
             type="number"
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
-            placeholder="quantity"
+            placeholder="Quantity"
             required
             className="input-field"
           />
@@ -106,7 +116,7 @@ const Addmeds = () => {
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="write a description"
+            placeholder="Write a description"
             required
             className="input-field"
           />

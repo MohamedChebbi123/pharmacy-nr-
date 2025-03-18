@@ -45,18 +45,32 @@ const Navbar = () => {
             >browse meds
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/signupadmin"
               className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
             >signupadmin
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               to="/loginasadmin"
               className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
             >login as admin
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/signupclient"
+              className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
+            >sign up as client
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="loginclient"
+              className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
+            >login client
             </Link>
           </li>
         </ul>
