@@ -68,9 +68,16 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="loginclient"
+              to="/loginclient"
               className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
             >login client
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/chatbotai"
+              className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
+            >chat bot 
             </Link>
           </li>
         </ul>

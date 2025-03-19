@@ -10,6 +10,7 @@ const signupadmin=require("./routes/signupadmin");
 const loginadmin=require("./routes/loginadmin");
 const signupclient=require("./routes/signupclient");
 const loginclient=require("./routes/loginclient");
+const chatbot=require("./routes/chatbot");
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/meds",meds);
@@ -18,6 +19,7 @@ app.use("/auth",signupadmin);
 app.use("/loginadmin",loginadmin);
 app.use("/signupclient",signupclient);
 app.use("/loginclient",loginclient);
+app.use("/chatbot",chatbot);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

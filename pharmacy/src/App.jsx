@@ -8,6 +8,7 @@ import Signupadmin from './Pages/signupadmin';
 import Loginadmin from './Pages/Loginadmin';
 import Signupclient from './Pages/Signupclient';
 import Loginclient from './Pages/Loginclient';
+import Chatbot from './Pages/Chatbot';
 import {BrowserRouter as  Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="/loginasadmin" element={<Loginadmin/>} />
           <Route path="/signupclient" element={<Signupclient/>} />
           <Route path="/loginclient" element={<Loginclient/>} />
+          <Route path="/chatbotai" element={<Chatbot/>} />
+
 
         </Routes>
       </Router>
