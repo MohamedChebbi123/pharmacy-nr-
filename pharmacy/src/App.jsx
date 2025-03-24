@@ -9,6 +9,7 @@ import Loginadmin from './Pages/Loginadmin';
 import Signupclient from './Pages/Signupclient';
 import Loginclient from './Pages/Loginclient';
 import Chatbot from './Pages/Chatbot';
+import Browsemedscl from './Pages/Browsemedscl';
 import {BrowserRouter as  Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/signupclient" element={<Signupclient/>} />
           <Route path="/loginclient" element={<Loginclient/>} />
           <Route path="/chatbotai" element={<Chatbot/>} />
+          <Route path="/browsemedscl" element={<Browsemedscl/>} />
+
 
 
         </Routes>

@@ -80,6 +80,13 @@ const Navbar = () => {
             >chat bot 
             </Link>
           </li>
+          <li>
+            <Link
+              to="/browsemedscl"
+              className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
+            >browsemedscl 
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
