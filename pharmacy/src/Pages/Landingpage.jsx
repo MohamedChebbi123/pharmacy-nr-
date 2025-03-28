@@ -1,5 +1,5 @@
 import React from 'react';
-import ld from 'C://Users//moham//OneDrive//Bureau//pharmacy//pharmacy//src//assets//ld.jpeg';
+import ld from 'C://Users//moham//OneDrive//Bureau//Nouveau dossier (3)//pharmacy-nr-//pharmacy//src//assets//ld.jpeg';
 
 const Landingpage = () => {
   return (

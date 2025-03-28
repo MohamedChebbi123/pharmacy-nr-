@@ -18,6 +18,7 @@ const browsemedscl = require("./routes/browsemedscl");
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use("/addmeds",meds)
 app.use("/browse", browsemeds);
 app.use("/auth", signupadmin);
 app.use("/loginadmin", loginadmin);

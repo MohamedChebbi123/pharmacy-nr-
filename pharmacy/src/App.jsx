@@ -1,6 +1,6 @@
 //import './App.css'
 import Landingpage from './Pages/Landingpage';
-import Aboutus from './Pages/Aboutus';
+
 import Addmeds from './Pages/Addmeds';
 import Navbar from './components/Navbar';
 import Browsemeds from './Pages/browsemeds';
@@ -10,6 +10,7 @@ import Signupclient from './Pages/Signupclient';
 import Loginclient from './Pages/Loginclient';
 import Chatbot from './Pages/Chatbot';
 import Browsemedscl from './Pages/Browsemedscl';
+import Inventory from './Pages/Inventory';
 import {BrowserRouter as  Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Landingpage/>}  />
-          <Route path="/aboutus" element={<Aboutus/>} />
+          
           <Route path="/addmeds" element={<Addmeds/>} />
           <Route path="/browsemeds" element={<Browsemeds/>} />
           <Route path="/signupadmin" element={<Signupadmin/>} />
@@ -27,9 +28,7 @@ function App() {
           <Route path="/loginclient" element={<Loginclient/>} />
           <Route path="/chatbotai" element={<Chatbot/>} />
           <Route path="/browsemedscl" element={<Browsemedscl/>} />
-
-
-
+          <Route path="//inventory" element={<Inventory/>} />
         </Routes>
       </Router>
     </>

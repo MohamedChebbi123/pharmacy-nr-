@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const openRouterConfig = {
   baseURL: "https://openrouter.ai/api/v1",
-  apiKey: "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",
+  apiKey: "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",
 };
 
 router.post('/chatbotai', async (req, res) => {
