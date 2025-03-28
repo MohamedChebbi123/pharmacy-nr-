@@ -23,14 +23,7 @@ const Navbar = () => {
               Sign In
             </Link>
           </li>
-          <li>
-            <Link
-              to="/aboutus"
-              className="text-gray-700 hover:text-green-600 font-semibold transition duration-300"
-            >
-              About Us
-            </Link>
-          </li>
+          
           <li>
             <Link
               to="/addmeds"
