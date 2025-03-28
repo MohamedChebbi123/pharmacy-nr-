@@ -206,7 +206,6 @@ const Browsemedscl = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <h3 className="mt-4 text-lg font-medium text-gray-900">No medicines found</h3>
-                  <p className="mt-2 text-sm text-gray-500">Try adjusting your search or filter to find what you're looking for.</p>
                 </div>
               )
             )}
